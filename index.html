@@ -136,16 +136,26 @@
     <h3 class="w3-border-bottom w3-border-light-grey w3-padding-16"></h3>
     <p>If you have a question about anything please feel free to contact us.</p>
     <form action="/action_page.php" target="_blank">
-      <input class="w3-input" type="text" placeholder="Name" required name="Name">
-      <input class="w3-input w3-section" type="text" placeholder="Email" required name="Email">
-      <input class="w3-input w3-section" type="text" placeholder="Subject" required name="Subject">
-      <input class="w3-input w3-section" type="text" placeholder="Comment" required name="Comment">
-      <button class="w3-button w3-black w3-section" type="submit">
+      <input id = "name" class="w3-input" type="text" placeholder="Name" required name="Name">
+      <input id = "email" class="w3-input w3-section" type="text" placeholder="Email" required name="Email">
+      <input id = " subject" class="w3-input w3-section" type="text" placeholder="Subject" required name="Subject">
+      <input id = "comment" class="w3-input w3-section" type="text" placeholder="Comment" required name="Comment">
+      <button class="w3-button w3-black w3-section" onclick = "sendEmail()" type="submit">
         <i class="fa fa-paper-plane"></i> SEND MESSAGE
       </button>
     </form>
   </div>
-
+    
+    <script>
+      
+      function sendEmail(){
+        var name = document.getElementById("name");
+        var email = document.getElementById("email");
+        var subject = document.getElementById("subject");
+        var comment = document.getElementById("comment");
+        window.open('mailto:anusha.nandam1@gmail.com?subject=subject&body=comment');
+      }
+    </script>
 <!-- End page content -->
 </div>
 
